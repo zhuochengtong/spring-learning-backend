@@ -1,0 +1,123 @@
+spring:
+  application:
+    # 应用名称
+    name: itzhuo-system
+  mvc:
+    servlet:
+      #  启动之后立即加载servlet
+      load-on-startup: 0
+  main:
+    #解决bean重复定义的。设置为true时，后定义的bean会覆盖之前定义的相同名称的bean
+    allow-bean-definition-overriding: true
+    allow-circular-references: true
+  profiles:
+    active: dev
+
+
+  # 文件上传配置
+  servlet:
+    multipart:
+      max-file-size: 10MB        # 设置单个文件最大大小为10MB
+      max-request-size: 100MB    # 设置多个文件大小为100MB
+  # 数据源配置
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://127.0.0.1:3306/easypan?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
+    username: root
+    password: 123456
+    hikari:
+      connection-test-query: SELECT 1 # 自动检测连接
+      connection-timeout: 60000 #数据库连接超时时间,默认30秒
+      idle-timeout: 500000 #空闲连接存活最大时间，默认600000（10分钟）
+      max-lifetime: 540000 #此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认1800000即30分钟
+      maximum-pool-size: 12 #连接池最大连接数，默认是10
+      minimum-idle: 10 #最小空闲连接数量
+      pool-name: SPHHikariPool # 连接池名称
+  #  redis配置
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      database: 15
+
+# mybatis-plus配置 用于打印框架生成的sql语句，便于调试
+mybatis-plus:
+  global-config:
+    db-config:
+      #      logic-delete-field: isDeleted # 全局逻辑删除的实体字段名(配置后可以忽略不配置步骤二)
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# minio配置
+minio:
+  endpoint: http://localhost:9005
+  access-key: Uvvo9CqHZX07vyojSta2
+  secret-key: foLfnZbikox87YvmzwSM0AgFb2Y3tZfuCos7mfOu
+  bucket-name: house
+
+# swagger配置
+springdoc:
+  default-flat-param-object: true
+
+
+
+
+
+#spring:
+#  application:
+#    # 应用名称
+#    name: jnpf-permission
+#  mvc:
+#    servlet:
+#      #  启动之后立即加载servlet
+#      load-on-startup: 0
+#  main:
+#    #解决bean重复定义的。设置为true时，后定义的bean会覆盖之前定义的相同名称的bean
+#    allow-bean-definition-overriding: true
+#    allow-circular-references: true
+#  profiles:
+#    active: dev
+#  cloud:
+#    nacos:
+#      username: nacos
+#      password: nacos
+#      discovery:
+#        # 服务注册地址
+#        server-addr: 10.156.193.26:30099
+#        group: zct
+#        namespace: ae498ee6-08c4-4ad4-9304-daf37c0ccf29
+#      config:
+#        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+#        file-extension: yaml
+#        group: DEFAULT_GROUP
+#        namespace: ${spring.cloud.nacos.discovery.namespace}
+#        extension-configs:
+#          - # 数据源及Redis配置
+#            data-id: datasource.yaml
+#            group: DEFAULT_GROUP
+#            refresh: true
+#          - # 静态资源配置
+#            data-id: resources.yaml
+#            group: DEFAULT_GROUP
+#            refresh: true
+#          - # 系统配置
+#            data-id: system-config-zct.yaml
+#            group: DEFAULT_GROUP
+#            refresh: true
+#          - # 框架中间件配置
+#            data-id: frame-config.yaml
+#            group: DEFAULT_GROUP
+#            refresh: true
+#          - # 日志配置
+#            data-id: logger.yaml
+#            group: DEFAULT_GROUP
+#            refresh: true
+#          - # 第三方登录配置
+#            data-id: socials.yaml
+#            group: DEFAULT_GROUP
+#            refresh: true
+##  autoconfigure:
+##    exclude: org.springframework.boot.autoconfigure.security.oauth2.OAuth2AutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.cloud.security.oauth2.SpringCloudSecurityAutoConfiguration, org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration
