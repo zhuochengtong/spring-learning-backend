@@ -1653,3 +1653,21 @@ java.lang.IllegalArgumentException: Invalid character found in method name [0x16
 [2025-03-09 17:09:56.625] [INFO ] [tomcat-shutdown] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Graceful shutdown complete
 [2025-03-09 17:09:56.630] [INFO ] [SpringApplicationShutdownHook] [] [com.zaxxer.hikari.HikariDataSource] [?] [?] - SPHHikariPool - Shutdown initiated...
 [2025-03-09 17:09:56.636] [INFO ] [SpringApplicationShutdownHook] [] [com.zaxxer.hikari.HikariDataSource] [?] [?] - SPHHikariPool - Shutdown completed.
+[2025-03-09 17:10:00.788] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 14236 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 17:10:00.789] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - No active profile set, falling back to 1 default profile: "default"
+[2025-03-09 17:10:01.257] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 17:10:01.259] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 17:10:01.282] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+[2025-03-09 17:10:01.645] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 17:10:01.657] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 17:10:01.657] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 17:10:01.704] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 17:10:01.704] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 889 ms
+[2025-03-09 17:10:02.380] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat started on port 30001 (http) with context path '/'
+[2025-03-09 17:10:02.386] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Started SystemApplication in 1.949 seconds (process running for 2.481)
+[2025-03-09 17:10:05.451] [INFO ] [http-nio-30001-exec-1] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2025-03-09 17:10:05.452] [INFO ] [http-nio-30001-exec-1] [] [org.springframework.web.servlet.DispatcherServlet] [?] [?] - Initializing Servlet 'dispatcherServlet'
+[2025-03-09 17:10:05.452] [INFO ] [http-nio-30001-exec-1] [] [org.springframework.web.servlet.DispatcherServlet] [?] [?] - Completed initialization in 0 ms
+[2025-03-09 17:10:05.486] [INFO ] [http-nio-30001-exec-1] [] [com.zaxxer.hikari.HikariDataSource] [?] [?] - SPHHikariPool - Starting...
+[2025-03-09 17:10:05.686] [INFO ] [http-nio-30001-exec-1] [] [com.zaxxer.hikari.pool.HikariPool] [?] [?] - SPHHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@731324
+[2025-03-09 17:10:05.687] [INFO ] [http-nio-30001-exec-1] [] [com.zaxxer.hikari.HikariDataSource] [?] [?] - SPHHikariPool - Start completed.
