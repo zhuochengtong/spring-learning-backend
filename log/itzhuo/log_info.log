@@ -1,20 +1,641 @@
-[2025-03-08 23:04:39.400] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 8468 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
-[2025-03-08 23:04:39.401] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
-[2025-03-08 23:04:39.872] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
-[2025-03-08 23:04:39.881] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
-[2025-03-08 23:04:39.881] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
-[2025-03-08 23:04:39.913] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
-[2025-03-08 23:04:39.913] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 491 ms
-[2025-03-08 23:04:40.119] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat started on port 30001 (http) with context path '/'
-[2025-03-08 23:04:40.124] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Started SystemApplication in 1.08 seconds (process running for 1.543)
-[2025-03-08 23:05:03.078] [INFO ] [SpringApplicationShutdownHook] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Commencing graceful shutdown. Waiting for active requests to complete
-[2025-03-08 23:05:03.088] [INFO ] [tomcat-shutdown] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Graceful shutdown complete
-[2025-03-08 23:05:05.023] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 14492 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
-[2025-03-08 23:05:05.024] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
-[2025-03-08 23:05:05.491] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
-[2025-03-08 23:05:05.499] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
-[2025-03-08 23:05:05.499] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
-[2025-03-08 23:05:05.528] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
-[2025-03-08 23:05:05.529] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 479 ms
-[2025-03-08 23:05:05.746] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat started on port 30001 (http) with context path '/'
-[2025-03-08 23:05:05.751] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Started SystemApplication in 1.052 seconds (process running for 1.445)
+[2025-03-09 11:04:01.862] [INFO ] [SpringApplicationShutdownHook] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Commencing graceful shutdown. Waiting for active requests to complete
+[2025-03-09 11:04:01.962] [INFO ] [tomcat-shutdown] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Graceful shutdown complete
+[2025-03-09 11:04:09.084] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 13220 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 11:04:09.084] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 11:04:09.717] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 11:04:09.727] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 11:04:09.727] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 11:04:09.764] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 11:04:09.764] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 658 ms
+[2025-03-09 11:04:09.801] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Stopping service [Tomcat]
+[2025-03-09 11:04:09.808] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 11:04:43.319] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 22848 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 11:04:43.319] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 11:04:44.011] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 11:04:44.022] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 11:04:44.022] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 11:04:44.059] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 11:04:44.059] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 715 ms
+[2025-03-09 11:04:44.100] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Stopping service [Tomcat]
+[2025-03-09 11:04:44.107] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 11:28:25.379] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 13400 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 11:28:25.380] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 11:28:26.050] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 11:28:26.059] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 11:28:26.059] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 11:28:26.095] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 11:28:26.095] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 685 ms
+[2025-03-09 11:28:26.134] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Stopping service [Tomcat]
+[2025-03-09 11:28:26.141] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 11:31:23.135] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 36860 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 11:31:23.136] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 11:31:23.734] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 11:31:23.741] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 11:31:23.742] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 11:31:23.776] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 11:31:23.776] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 616 ms
+[2025-03-09 11:31:23.814] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Stopping service [Tomcat]
+[2025-03-09 11:31:23.820] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 11:32:30.013] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 11048 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 11:32:30.014] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 11:32:30.644] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 11:32:30.655] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 11:32:30.655] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 11:32:30.698] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 11:32:30.698] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 664 ms
+[2025-03-09 11:32:30.737] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Stopping service [Tomcat]
+[2025-03-09 11:32:30.745] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 11:36:29.939] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 11960 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 11:36:29.940] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 11:36:30.514] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 11:36:30.521] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 11:36:30.521] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 11:36:30.553] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 11:36:30.553] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 594 ms
+[2025-03-09 11:36:30.586] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Stopping service [Tomcat]
+[2025-03-09 11:36:30.592] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 11:37:19.582] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 34196 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 11:37:19.583] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 11:37:20.194] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 11:37:20.203] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 11:37:20.204] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 11:37:20.238] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 11:37:20.239] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 633 ms
+[2025-03-09 11:37:20.274] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Stopping service [Tomcat]
+[2025-03-09 11:37:20.281] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 11:38:45.378] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 31200 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 11:38:45.379] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 11:38:45.775] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 11:38:45.777] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 11:38:45.812] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+[2025-03-09 11:38:46.182] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 11:38:46.204] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 11:38:46.206] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 11:38:46.239] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 11:38:46.239] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 836 ms
+[2025-03-09 11:38:46.660] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Stopping service [Tomcat]
+[2025-03-09 11:38:46.667] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 11:40:20.282] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 44188 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 11:40:20.283] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 11:40:20.610] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 11:40:20.611] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 11:40:20.647] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+[2025-03-09 11:40:20.988] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 11:40:21.008] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 11:40:21.008] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 11:40:21.042] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 11:40:21.042] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 735 ms
+[2025-03-09 11:40:21.425] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Stopping service [Tomcat]
+[2025-03-09 11:40:21.431] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 11:41:15.107] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 39948 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 11:41:15.107] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 11:41:15.447] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 11:41:15.449] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 11:41:15.485] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+[2025-03-09 11:41:15.804] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 11:41:15.815] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 11:41:15.815] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 11:41:15.848] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 11:41:15.848] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 718 ms
+[2025-03-09 11:41:16.291] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Stopping service [Tomcat]
+[2025-03-09 11:41:16.298] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 11:41:27.580] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 23356 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 11:41:27.581] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 11:41:27.936] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 11:41:27.937] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 11:41:27.959] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+[2025-03-09 11:41:28.280] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 11:41:28.289] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 11:41:28.290] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 11:41:28.324] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 11:41:28.324] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 722 ms
+[2025-03-09 11:41:28.529] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Stopping service [Tomcat]
+[2025-03-09 11:41:28.543] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 11:42:35.996] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 38260 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 11:42:35.996] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 11:42:36.334] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 11:42:36.335] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 11:42:36.355] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+[2025-03-09 11:42:36.745] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 11:42:36.755] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 11:42:36.755] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 11:42:36.789] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 11:42:36.789] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 771 ms
+[2025-03-09 11:42:37.003] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Stopping service [Tomcat]
+[2025-03-09 11:42:37.010] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 11:43:15.912] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 9236 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 11:43:15.913] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 11:43:16.269] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 11:43:16.271] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 11:43:16.290] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+[2025-03-09 11:43:16.663] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 11:43:16.673] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 11:43:16.673] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 11:43:16.708] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 11:43:16.708] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 768 ms
+[2025-03-09 11:43:16.933] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Stopping service [Tomcat]
+[2025-03-09 11:43:16.940] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 11:46:15.974] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 41248 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 11:46:15.975] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 11:46:16.372] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 11:46:16.374] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 11:46:16.398] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+[2025-03-09 11:46:16.737] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 11:46:16.747] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 11:46:16.747] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 11:46:16.784] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 11:46:16.784] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 779 ms
+[2025-03-09 11:46:17.017] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Stopping service [Tomcat]
+[2025-03-09 11:46:17.025] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 12:39:00.615] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 45648 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 12:39:00.616] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 12:39:01.056] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 12:39:01.058] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 12:39:01.081] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+[2025-03-09 12:39:01.489] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 12:39:01.498] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 12:39:01.499] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 12:39:01.533] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 12:39:01.534] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 891 ms
+[2025-03-09 12:39:01.796] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Stopping service [Tomcat]
+[2025-03-09 12:39:01.803] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 12:41:55.595] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 38272 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 12:41:55.596] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 12:41:55.992] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 12:41:55.994] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 12:41:56.016] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+[2025-03-09 12:41:56.377] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 12:41:56.386] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 12:41:56.386] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 12:41:56.423] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 12:41:56.423] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 803 ms
+[2025-03-09 12:41:56.654] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Stopping service [Tomcat]
+[2025-03-09 12:41:56.661] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 12:43:42.517] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 29652 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 12:43:42.518] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 12:43:42.902] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 12:43:42.904] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 12:43:42.925] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+[2025-03-09 12:43:43.284] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 12:43:43.292] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 12:43:43.292] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 12:43:43.326] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 12:43:43.326] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 777 ms
+[2025-03-09 12:43:43.547] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Stopping service [Tomcat]
+[2025-03-09 12:43:43.553] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 12:46:12.372] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 45504 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 12:46:12.372] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 12:46:12.765] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 12:46:12.767] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 12:46:12.789] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+[2025-03-09 12:46:12.909] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 12:50:52.375] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 41980 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 12:50:52.376] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 12:50:52.769] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 12:50:52.770] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 12:50:52.792] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+[2025-03-09 12:50:52.930] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 12:51:13.329] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 35700 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 12:51:13.329] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 12:51:13.718] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 12:51:13.720] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 12:51:13.743] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+[2025-03-09 12:51:13.861] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 12:56:08.916] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 16600 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 12:56:08.916] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 12:56:09.299] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 12:56:09.301] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 12:56:09.322] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaceinterfaces.
+[2025-03-09 12:56:09.690] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port(s): 30001 (http)
+[2025-03-09 12:56:09.696] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 12:56:09.697] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+[2025-03-09 12:56:09.751] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 12:56:09.751] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 808 ms
+[2025-03-09 12:56:09.949] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Stopping service [Tomcat]
+[2025-03-09 12:56:09.958] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 13:02:59.682] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 39384 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 13:02:59.683] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 13:03:00.099] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 13:03:00.100] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 13:03:00.126] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+[2025-03-09 13:03:00.260] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 13:05:26.155] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 44496 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 13:05:26.155] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 13:05:26.591] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 13:05:26.593] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 13:05:26.618] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+[2025-03-09 13:05:26.752] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 13:06:00.271] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 22576 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 13:06:00.272] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 13:06:00.657] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 13:06:00.659] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 13:06:00.681] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+[2025-03-09 13:06:00.805] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 13:06:48.846] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 44144 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 13:06:48.847] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 13:06:49.235] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 13:06:49.236] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 13:06:49.261] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+[2025-03-09 13:06:49.397] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 13:07:58.127] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 43556 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 13:07:58.127] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 13:07:58.511] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 13:07:58.513] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 13:07:58.539] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+[2025-03-09 13:07:58.659] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 13:08:08.272] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 37692 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 13:08:08.272] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 13:08:08.677] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 13:08:08.682] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 13:08:08.708] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+[2025-03-09 13:08:08.835] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 13:08:35.641] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 13468 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 13:08:35.642] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 13:08:36.044] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 13:08:36.046] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 13:08:36.071] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+[2025-03-09 13:08:36.196] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 13:10:41.104] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 28980 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 13:10:41.104] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 13:10:41.513] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 13:10:41.516] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 13:10:41.540] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+[2025-03-09 13:10:41.934] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 13:10:41.944] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 13:10:41.944] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 13:10:41.983] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 13:10:41.983] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 853 ms
+[2025-03-09 13:10:42.277] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Stopping service [Tomcat]
+[2025-03-09 13:10:42.285] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 13:11:38.832] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 19948 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 13:11:38.833] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 13:11:39.217] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 13:11:39.219] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 13:11:39.241] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+[2025-03-09 13:11:39.589] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 13:11:39.598] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 13:11:39.598] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 13:11:39.631] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 13:11:39.631] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 771 ms
+[2025-03-09 13:11:39.889] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Stopping service [Tomcat]
+[2025-03-09 13:11:39.896] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 13:12:02.929] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 29012 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 13:12:02.929] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 13:12:03.319] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 13:12:03.321] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 13:12:03.345] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+[2025-03-09 13:12:03.682] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 13:12:03.697] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 13:12:03.698] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 13:12:03.728] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 13:12:03.728] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 769 ms
+[2025-03-09 13:12:03.972] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Stopping service [Tomcat]
+[2025-03-09 13:12:03.980] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 13:14:28.107] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 11820 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 13:14:28.108] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - The following 1 profile is active: "dev"
+[2025-03-09 13:14:28.515] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 13:14:28.516] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 13:14:28.538] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+[2025-03-09 13:14:28.897] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 13:14:28.907] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 13:14:28.907] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 13:14:28.941] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 13:14:28.942] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 809 ms
+[2025-03-09 13:14:29.199] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Stopping service [Tomcat]
+[2025-03-09 13:14:29.205] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 13:18:01.298] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 10900 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 13:18:01.299] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - No active profile set, falling back to 1 default profile: "default"
+[2025-03-09 13:18:01.672] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 13:18:01.673] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 13:18:01.695] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+[2025-03-09 13:18:02.037] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 13:18:02.047] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 13:18:02.048] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 13:18:02.087] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 13:18:02.087] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 764 ms
+[2025-03-09 13:18:02.371] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Stopping service [Tomcat]
+[2025-03-09 13:18:02.377] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 13:18:17.556] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 23072 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 13:18:17.558] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - No active profile set, falling back to 1 default profile: "default"
+[2025-03-09 13:18:17.974] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 13:18:17.976] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 13:18:18.011] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+[2025-03-09 13:18:18.341] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 13:18:18.350] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 13:18:18.350] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 13:18:18.380] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 13:18:18.380] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 794 ms
+[2025-03-09 13:18:18.641] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Stopping service [Tomcat]
+[2025-03-09 13:18:18.647] [INFO ] [main] [] [o.s.b.a.logging.ConditionEvaluationReportLogger] [?] [?] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2025-03-09 13:20:15.734] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 29748 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 13:20:15.734] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - No active profile set, falling back to 1 default profile: "default"
+[2025-03-09 13:20:16.104] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 13:20:16.106] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 13:20:16.129] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+[2025-03-09 13:20:16.461] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 13:20:16.470] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 13:20:16.471] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 13:20:16.506] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 13:20:16.506] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 748 ms
+[2025-03-09 13:20:17.185] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat started on port 30001 (http) with context path '/'
+[2025-03-09 13:20:17.190] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Started SystemApplication in 1.78 seconds (process running for 2.279)
+[2025-03-09 13:20:58.436] [INFO ] [SpringApplicationShutdownHook] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Commencing graceful shutdown. Waiting for active requests to complete
+[2025-03-09 13:20:58.446] [INFO ] [tomcat-shutdown] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Graceful shutdown complete
+[2025-03-09 13:21:02.371] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 42736 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 13:21:02.372] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - No active profile set, falling back to 1 default profile: "default"
+[2025-03-09 13:21:02.792] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 13:21:02.793] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 13:21:02.818] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+[2025-03-09 13:21:03.155] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 13:21:03.170] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 13:21:03.171] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 13:21:03.205] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 13:21:03.205] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 805 ms
+[2025-03-09 13:21:03.871] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat started on port 30001 (http) with context path '/'
+[2025-03-09 13:21:03.876] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Started SystemApplication in 1.855 seconds (process running for 2.36)
+[2025-03-09 13:22:30.965] [INFO ] [http-nio-30001-exec-2] [] [org.apache.coyote.http11.Http11Processor] [?] [?] - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xf70x010x000x000xf30x030x030xf00x1aF0xfa0x0b0x920xccO0x1e0xaf0xc10xf4^0x17<W0x82{0xb00xf6#0x990xa0UGc0xfe0xa90xf3 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:409)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+[2025-03-09 13:23:17.475] [INFO ] [http-nio-30001-exec-4] [] [org.apache.coyote.http11.Http11Processor] [?] [?] - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xf70x010x000x000xf30x030x030xceP0xe50xa20x8cY0xc20xeb'&0xb0I0x910xad0xf10xa40xbf0x95&>V0xf8E0xe80xe9K(O0x83w0xbdu ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:409)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+[2025-03-09 13:25:04.967] [INFO ] [http-nio-30001-exec-6] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2025-03-09 13:25:04.969] [INFO ] [http-nio-30001-exec-6] [] [org.springframework.web.servlet.DispatcherServlet] [?] [?] - Initializing Servlet 'dispatcherServlet'
+[2025-03-09 13:25:04.970] [INFO ] [http-nio-30001-exec-6] [] [org.springframework.web.servlet.DispatcherServlet] [?] [?] - Completed initialization in 0 ms
+[2025-03-09 13:28:04.174] [INFO ] [SpringApplicationShutdownHook] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Commencing graceful shutdown. Waiting for active requests to complete
+[2025-03-09 13:28:04.184] [INFO ] [tomcat-shutdown] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Graceful shutdown complete
+[2025-03-09 13:28:07.481] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 40540 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 13:28:07.482] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - No active profile set, falling back to 1 default profile: "default"
+[2025-03-09 13:28:07.845] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 13:28:07.847] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 13:28:07.868] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+[2025-03-09 13:28:08.206] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 13:28:08.214] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 13:28:08.214] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 13:28:08.245] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 13:28:08.245] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 739 ms
+[2025-03-09 13:28:08.855] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat started on port 30001 (http) with context path '/'
+[2025-03-09 13:28:08.860] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Started SystemApplication in 1.703 seconds (process running for 2.18)
+[2025-03-09 13:28:38.964] [INFO ] [http-nio-30001-exec-1] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2025-03-09 13:28:38.964] [INFO ] [http-nio-30001-exec-1] [] [org.springframework.web.servlet.DispatcherServlet] [?] [?] - Initializing Servlet 'dispatcherServlet'
+[2025-03-09 13:28:38.965] [INFO ] [http-nio-30001-exec-1] [] [org.springframework.web.servlet.DispatcherServlet] [?] [?] - Completed initialization in 1 ms
+[2025-03-09 16:24:52.299] [INFO ] [SpringApplicationShutdownHook] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Commencing graceful shutdown. Waiting for active requests to complete
+[2025-03-09 16:24:52.312] [INFO ] [tomcat-shutdown] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Graceful shutdown complete
+[2025-03-09 16:25:00.793] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 8052 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 16:25:00.794] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - No active profile set, falling back to 1 default profile: "default"
+[2025-03-09 16:25:01.289] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 16:25:01.291] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 16:25:01.324] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+[2025-03-09 16:25:01.804] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 16:25:01.821] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 16:25:01.821] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 16:25:01.875] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 16:25:01.875] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 1047 ms
+[2025-03-09 16:25:02.570] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat started on port 30001 (http) with context path '/'
+[2025-03-09 16:25:02.575] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Started SystemApplication in 2.26 seconds (process running for 2.891)
+[2025-03-09 16:28:51.761] [INFO ] [http-nio-30001-exec-2] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2025-03-09 16:28:51.762] [INFO ] [http-nio-30001-exec-2] [] [org.springframework.web.servlet.DispatcherServlet] [?] [?] - Initializing Servlet 'dispatcherServlet'
+[2025-03-09 16:28:51.762] [INFO ] [http-nio-30001-exec-2] [] [org.springframework.web.servlet.DispatcherServlet] [?] [?] - Completed initialization in 0 ms
+[2025-03-09 16:30:46.870] [INFO ] [SpringApplicationShutdownHook] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Commencing graceful shutdown. Waiting for active requests to complete
+[2025-03-09 16:30:46.880] [INFO ] [tomcat-shutdown] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Graceful shutdown complete
+[2025-03-09 16:30:51.530] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 40840 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 16:30:51.530] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - No active profile set, falling back to 1 default profile: "default"
+[2025-03-09 16:30:51.911] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 16:30:51.913] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 16:30:51.934] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+[2025-03-09 16:30:52.314] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 16:30:52.324] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 16:30:52.324] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 16:30:52.361] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 16:30:52.361] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 808 ms
+[2025-03-09 16:30:53.106] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat started on port 30001 (http) with context path '/'
+[2025-03-09 16:30:53.110] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Started SystemApplication in 1.925 seconds (process running for 2.46)
+[2025-03-09 16:31:07.402] [INFO ] [http-nio-30001-exec-1] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2025-03-09 16:31:07.402] [INFO ] [http-nio-30001-exec-1] [] [org.springframework.web.servlet.DispatcherServlet] [?] [?] - Initializing Servlet 'dispatcherServlet'
+[2025-03-09 16:31:07.402] [INFO ] [http-nio-30001-exec-1] [] [org.springframework.web.servlet.DispatcherServlet] [?] [?] - Completed initialization in 0 ms
+[2025-03-09 16:32:14.806] [INFO ] [SpringApplicationShutdownHook] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Commencing graceful shutdown. Waiting for active requests to complete
+[2025-03-09 16:32:14.822] [INFO ] [tomcat-shutdown] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Graceful shutdown complete
+[2025-03-09 16:32:17.888] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 6628 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 16:32:17.888] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - No active profile set, falling back to 1 default profile: "default"
+[2025-03-09 16:32:18.284] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 16:32:18.285] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 16:32:18.310] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+[2025-03-09 16:32:18.646] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 16:32:18.654] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 16:32:18.654] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 16:32:18.692] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 16:32:18.692] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 777 ms
+[2025-03-09 16:32:19.332] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat started on port 30001 (http) with context path '/'
+[2025-03-09 16:32:19.337] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Started SystemApplication in 1.8 seconds (process running for 2.304)
+[2025-03-09 16:32:44.845] [INFO ] [http-nio-30001-exec-1] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2025-03-09 16:32:44.845] [INFO ] [http-nio-30001-exec-1] [] [org.springframework.web.servlet.DispatcherServlet] [?] [?] - Initializing Servlet 'dispatcherServlet'
+[2025-03-09 16:32:44.845] [INFO ] [http-nio-30001-exec-1] [] [org.springframework.web.servlet.DispatcherServlet] [?] [?] - Completed initialization in 0 ms
+[2025-03-09 16:32:51.534] [INFO ] [http-nio-30001-exec-1] [] [com.zaxxer.hikari.HikariDataSource] [?] [?] - SPHHikariPool - Starting...
+[2025-03-09 16:32:51.811] [INFO ] [http-nio-30001-exec-1] [] [com.zaxxer.hikari.pool.HikariPool] [?] [?] - SPHHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@77dc8c45
+[2025-03-09 16:32:51.812] [INFO ] [http-nio-30001-exec-1] [] [com.zaxxer.hikari.HikariDataSource] [?] [?] - SPHHikariPool - Start completed.
+[2025-03-09 16:35:28.684] [INFO ] [SpringApplicationShutdownHook] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Commencing graceful shutdown. Waiting for active requests to complete
+[2025-03-09 16:35:28.692] [INFO ] [tomcat-shutdown] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Graceful shutdown complete
+[2025-03-09 16:35:28.706] [INFO ] [SpringApplicationShutdownHook] [] [com.zaxxer.hikari.HikariDataSource] [?] [?] - SPHHikariPool - Shutdown initiated...
+[2025-03-09 16:35:28.713] [INFO ] [SpringApplicationShutdownHook] [] [com.zaxxer.hikari.HikariDataSource] [?] [?] - SPHHikariPool - Shutdown completed.
+[2025-03-09 16:35:34.930] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 41992 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 16:35:34.930] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - No active profile set, falling back to 1 default profile: "default"
+[2025-03-09 16:35:35.322] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 16:35:35.324] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 16:35:35.346] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+[2025-03-09 16:35:35.732] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 16:35:35.742] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 16:35:35.742] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 16:35:35.778] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 16:35:35.778] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 821 ms
+[2025-03-09 16:35:36.444] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat started on port 30001 (http) with context path '/'
+[2025-03-09 16:35:36.449] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Started SystemApplication in 1.89 seconds (process running for 2.441)
+[2025-03-09 16:38:06.469] [INFO ] [SpringApplicationShutdownHook] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Commencing graceful shutdown. Waiting for active requests to complete
+[2025-03-09 16:38:06.486] [INFO ] [tomcat-shutdown] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Graceful shutdown complete
+[2025-03-09 16:41:22.043] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 6176 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 16:41:22.044] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - No active profile set, falling back to 1 default profile: "default"
+[2025-03-09 16:41:22.433] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 16:41:22.435] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 16:41:22.461] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+[2025-03-09 16:41:22.870] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 16:41:22.881] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 16:41:22.881] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 16:41:22.933] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 16:41:22.933] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 866 ms
+[2025-03-09 16:41:23.813] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat started on port 30001 (http) with context path '/'
+[2025-03-09 16:41:23.820] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Started SystemApplication in 2.133 seconds (process running for 2.68)
+[2025-03-09 16:41:29.428] [INFO ] [http-nio-30001-exec-2] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2025-03-09 16:41:29.429] [INFO ] [http-nio-30001-exec-2] [] [org.springframework.web.servlet.DispatcherServlet] [?] [?] - Initializing Servlet 'dispatcherServlet'
+[2025-03-09 16:41:29.429] [INFO ] [http-nio-30001-exec-2] [] [org.springframework.web.servlet.DispatcherServlet] [?] [?] - Completed initialization in 0 ms
+[2025-03-09 16:41:33.822] [INFO ] [http-nio-30001-exec-2] [] [com.zaxxer.hikari.HikariDataSource] [?] [?] - SPHHikariPool - Starting...
+[2025-03-09 16:41:34.072] [INFO ] [http-nio-30001-exec-2] [] [com.zaxxer.hikari.pool.HikariPool] [?] [?] - SPHHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@55cbb8bb
+[2025-03-09 16:41:34.072] [INFO ] [http-nio-30001-exec-2] [] [com.zaxxer.hikari.HikariDataSource] [?] [?] - SPHHikariPool - Start completed.
+[2025-03-09 16:42:29.532] [INFO ] [SpringApplicationShutdownHook] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Commencing graceful shutdown. Waiting for active requests to complete
+[2025-03-09 16:42:29.549] [INFO ] [tomcat-shutdown] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Graceful shutdown complete
+[2025-03-09 16:42:29.564] [INFO ] [SpringApplicationShutdownHook] [] [com.zaxxer.hikari.HikariDataSource] [?] [?] - SPHHikariPool - Shutdown initiated...
+[2025-03-09 16:42:29.571] [INFO ] [SpringApplicationShutdownHook] [] [com.zaxxer.hikari.HikariDataSource] [?] [?] - SPHHikariPool - Shutdown completed.
+[2025-03-09 16:42:33.794] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 1340 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 16:42:33.795] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - No active profile set, falling back to 1 default profile: "default"
+[2025-03-09 16:42:34.228] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 16:42:34.229] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 16:42:34.253] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+[2025-03-09 16:42:34.597] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 16:42:34.605] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 16:42:34.606] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 16:42:34.644] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 16:42:34.644] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 822 ms
+[2025-03-09 16:42:35.284] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat started on port 30001 (http) with context path '/'
+[2025-03-09 16:42:35.289] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Started SystemApplication in 1.861 seconds (process running for 2.389)
+[2025-03-09 16:42:36.189] [INFO ] [http-nio-30001-exec-1] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2025-03-09 16:42:36.189] [INFO ] [http-nio-30001-exec-1] [] [org.springframework.web.servlet.DispatcherServlet] [?] [?] - Initializing Servlet 'dispatcherServlet'
+[2025-03-09 16:42:36.190] [INFO ] [http-nio-30001-exec-1] [] [org.springframework.web.servlet.DispatcherServlet] [?] [?] - Completed initialization in 0 ms
+[2025-03-09 16:48:01.938] [INFO ] [SpringApplicationShutdownHook] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Commencing graceful shutdown. Waiting for active requests to complete
+[2025-03-09 16:48:01.949] [INFO ] [tomcat-shutdown] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Graceful shutdown complete
+[2025-03-09 16:48:05.953] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 8140 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 16:48:05.954] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - No active profile set, falling back to 1 default profile: "default"
+[2025-03-09 16:48:06.348] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 16:48:06.349] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 16:48:06.370] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+[2025-03-09 16:48:06.708] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 16:48:06.723] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 16:48:06.723] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 16:48:06.758] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 16:48:06.758] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 776 ms
+[2025-03-09 16:48:07.366] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat started on port 30001 (http) with context path '/'
+[2025-03-09 16:48:07.370] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Started SystemApplication in 1.763 seconds (process running for 2.312)
+[2025-03-09 16:48:42.508] [INFO ] [http-nio-30001-exec-2] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2025-03-09 16:48:42.508] [INFO ] [http-nio-30001-exec-2] [] [org.springframework.web.servlet.DispatcherServlet] [?] [?] - Initializing Servlet 'dispatcherServlet'
+[2025-03-09 16:48:42.509] [INFO ] [http-nio-30001-exec-2] [] [org.springframework.web.servlet.DispatcherServlet] [?] [?] - Completed initialization in 1 ms
+[2025-03-09 17:06:36.311] [INFO ] [SpringApplicationShutdownHook] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Commencing graceful shutdown. Waiting for active requests to complete
+[2025-03-09 17:06:36.321] [INFO ] [tomcat-shutdown] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Graceful shutdown complete
+[2025-03-09 17:06:40.744] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 44840 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 17:06:40.745] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - No active profile set, falling back to 1 default profile: "default"
+[2025-03-09 17:06:41.142] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 17:06:41.144] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 17:06:41.170] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+[2025-03-09 17:06:41.536] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 17:06:41.546] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 17:06:41.547] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 17:06:41.588] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 17:06:41.588] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 815 ms
+[2025-03-09 17:06:42.315] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat started on port 30001 (http) with context path '/'
+[2025-03-09 17:06:42.321] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Started SystemApplication in 1.95 seconds (process running for 2.493)
+[2025-03-09 17:06:45.409] [INFO ] [http-nio-30001-exec-5] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2025-03-09 17:06:45.409] [INFO ] [http-nio-30001-exec-5] [] [org.springframework.web.servlet.DispatcherServlet] [?] [?] - Initializing Servlet 'dispatcherServlet'
+[2025-03-09 17:06:45.410] [INFO ] [http-nio-30001-exec-5] [] [org.springframework.web.servlet.DispatcherServlet] [?] [?] - Completed initialization in 0 ms
+[2025-03-09 17:06:45.448] [INFO ] [http-nio-30001-exec-5] [] [com.zaxxer.hikari.HikariDataSource] [?] [?] - SPHHikariPool - Starting...
+[2025-03-09 17:06:45.705] [INFO ] [http-nio-30001-exec-5] [] [com.zaxxer.hikari.pool.HikariPool] [?] [?] - SPHHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@40931af6
+[2025-03-09 17:06:45.706] [INFO ] [http-nio-30001-exec-5] [] [com.zaxxer.hikari.HikariDataSource] [?] [?] - SPHHikariPool - Start completed.
+[2025-03-09 17:07:40.047] [INFO ] [SpringApplicationShutdownHook] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Commencing graceful shutdown. Waiting for active requests to complete
+[2025-03-09 17:07:40.054] [INFO ] [tomcat-shutdown] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Graceful shutdown complete
+[2025-03-09 17:07:40.059] [INFO ] [SpringApplicationShutdownHook] [] [com.zaxxer.hikari.HikariDataSource] [?] [?] - SPHHikariPool - Shutdown initiated...
+[2025-03-09 17:07:40.066] [INFO ] [SpringApplicationShutdownHook] [] [com.zaxxer.hikari.HikariDataSource] [?] [?] - SPHHikariPool - Shutdown completed.
+[2025-03-09 17:07:44.161] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Starting SystemApplication using Java 21.0.5 with PID 42984 (D:\zhuochengtong\Code\20250307-github\spring-learning-backend\system\target\classes started by zhuochengtong in D:\zhuochengtong\Code\20250307-github\spring-learning-backend)
+[2025-03-09 17:07:44.162] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - No active profile set, falling back to 1 default profile: "default"
+[2025-03-09 17:07:44.562] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-03-09 17:07:44.563] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-03-09 17:07:44.587] [INFO ] [main] [] [o.s.d.r.config.RepositoryConfigurationDelegate] [?] [?] - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+[2025-03-09 17:07:44.960] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat initialized with port 30001 (http)
+[2025-03-09 17:07:44.968] [INFO ] [main] [] [org.apache.catalina.core.StandardService] [?] [?] - Starting service [Tomcat]
+[2025-03-09 17:07:44.969] [INFO ] [main] [] [org.apache.catalina.core.StandardEngine] [?] [?] - Starting Servlet engine: [Apache Tomcat/10.1.36]
+[2025-03-09 17:07:45.006] [INFO ] [main] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring embedded WebApplicationContext
+[2025-03-09 17:07:45.006] [INFO ] [main] [] [o.s.b.w.s.c.ServletWebServerApplicationContext] [?] [?] - Root WebApplicationContext: initialization completed in 817 ms
+[2025-03-09 17:07:45.679] [INFO ] [main] [] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [?] [?] - Tomcat started on port 30001 (http) with context path '/'
+[2025-03-09 17:07:45.684] [INFO ] [main] [] [itzhuo.system.SystemApplication] [?] [?] - Started SystemApplication in 1.911 seconds (process running for 2.409)
+[2025-03-09 17:07:48.417] [INFO ] [http-nio-30001-exec-1] [] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [?] [?] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2025-03-09 17:07:48.417] [INFO ] [http-nio-30001-exec-1] [] [org.springframework.web.servlet.DispatcherServlet] [?] [?] - Initializing Servlet 'dispatcherServlet'
+[2025-03-09 17:07:48.417] [INFO ] [http-nio-30001-exec-1] [] [org.springframework.web.servlet.DispatcherServlet] [?] [?] - Completed initialization in 0 ms
+[2025-03-09 17:07:48.451] [INFO ] [http-nio-30001-exec-1] [] [com.zaxxer.hikari.HikariDataSource] [?] [?] - SPHHikariPool - Starting...
+[2025-03-09 17:07:48.655] [INFO ] [http-nio-30001-exec-1] [] [com.zaxxer.hikari.pool.HikariPool] [?] [?] - SPHHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@42fb3476
+[2025-03-09 17:07:48.657] [INFO ] [http-nio-30001-exec-1] [] [com.zaxxer.hikari.HikariDataSource] [?] [?] - SPHHikariPool - Start completed.
+[2025-03-09 17:09:56.615] [INFO ] [SpringApplicationShutdownHook] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Commencing graceful shutdown. Waiting for active requests to complete
+[2025-03-09 17:09:56.625] [INFO ] [tomcat-shutdown] [] [o.s.boot.web.embedded.tomcat.GracefulShutdown] [?] [?] - Graceful shutdown complete
+[2025-03-09 17:09:56.630] [INFO ] [SpringApplicationShutdownHook] [] [com.zaxxer.hikari.HikariDataSource] [?] [?] - SPHHikariPool - Shutdown initiated...
+[2025-03-09 17:09:56.636] [INFO ] [SpringApplicationShutdownHook] [] [com.zaxxer.hikari.HikariDataSource] [?] [?] - SPHHikariPool - Shutdown completed.
