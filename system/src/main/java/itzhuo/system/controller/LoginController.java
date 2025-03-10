@@ -9,6 +9,7 @@ import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.*;
 
 import javax.swing.*;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/system")
@@ -32,13 +33,13 @@ public class LoginController {
 
     /**
      * 登录
-     * @param loginVO
+     * @param parameters
      * @return
      */
-    @PostMapping("/login")
-    public ActionResult login(@RequestBody LoginVO loginVO){
+    @RequestMapping(value = "/login", method = {RequestMethod.GET, RequestMethod.POST})
+    public ActionResult<LoginVO> login(@RequestParam Map<String, String> parameters){
         try {
-            return ActionResult.success(loginService.login(loginVO));
+            return ActionResult.success(loginService.login(parameters));
         } catch (Exception e) {
             return ActionResult.fail(e.getMessage());
         }

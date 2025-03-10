@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.apache.commons.codec.digest.DigestUtils;
 
+import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
@@ -49,25 +50,27 @@ public class LoginServiceImpl implements LoginService {
     }
 
     @Override
-    public String login(LoginVO loginVO) throws Exception {
+    public LoginVO login(Map<String, String> parameters) throws Exception {
         // 1、判断是否是入了验证码
-        if (!StringUtils.hasText(loginVO.getCaptchaCode())) {
+        if (!StringUtils.hasText(parameters.get("captchaCode"))) {
             throw new RuntimeException("未输入验证码！");
         }
         // 2、校验验证码
-        if (!loginVO.getCaptchaCode().equals(redisTemplate.opsForValue().get(loginVO.getCaptchaKey()))) {
+        if (!parameters.get("captchaCode").equals(redisTemplate.opsForValue().get(parameters.get("captchaKey")))) {
             throw new RuntimeException("验证码错误！");
         }
         // 3、校验用户名密码
         LambdaQueryWrapper<UserEntity> wrapper = new LambdaQueryWrapper<>();
-        wrapper.eq(UserEntity::getUsername,loginVO.getUsername()).eq(UserEntity::getPassword,DigestUtils.sha256Hex(loginVO.getPassword()));
-        System.out.println(DigestUtils.sha256Hex(loginVO.getPassword()));
+        wrapper.eq(UserEntity::getUsername,parameters.get("username")).eq(UserEntity::getPassword,DigestUtils.sha256Hex(parameters.get("password")));
+        System.out.println(DigestUtils.sha256Hex(parameters.get("password")));
         UserEntity userEntity = userService.getOne(wrapper);
         if (userEntity == null) {
             throw new RuntimeException("用户名或密码错误！");
         }
         // 4、生成token
-        return JwtUtil.createToken(userEntity.getId(),userEntity.getUsername());
+        LoginVO loginVO = new LoginVO();
+        loginVO.setToken(JwtUtil.createToken(userEntity.getId(),userEntity.getUsername()));
+        return loginVO;
     }
 
     @Override
