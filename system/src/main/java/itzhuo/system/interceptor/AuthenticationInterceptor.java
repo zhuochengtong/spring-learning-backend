@@ -3,6 +3,7 @@ package itzhuo.system.interceptor;
 import io.jsonwebtoken.Claims;
 import itzhuo.common.context.LoginUser;
 import itzhuo.common.context.LoginUserContext;
+import itzhuo.common.exception.BizException;
 import itzhuo.common.utils.JwtUtil;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -30,10 +31,10 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
         log.info("--------Pre Handle method is Calling-------------");
         String authHeader = request.getHeader("Authorization");
         if (authHeader == null) {
-            throw new Exception("token不存在,未登录");
+            throw new BizException("token不存在,未登录");
         }
         if (!authHeader.startsWith("Bearer ")) {
-            throw new Exception("非法Token格式");
+            throw new BizException("非法Token格式");
         }
         // 提取并去除 Bearer 前缀(这是在前端拼接的前缀)
         String token = authHeader.substring(7);

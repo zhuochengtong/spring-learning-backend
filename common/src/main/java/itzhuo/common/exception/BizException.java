@@ -1,7 +1,11 @@
-package itzhuo.common.common;
+package itzhuo.common.exception;
 
+import itzhuo.common.common.ResultCode;
 import lombok.Data;
 
+/**
+ * 业务异常
+ */
 @Data
 public class BizException extends RuntimeException {
 

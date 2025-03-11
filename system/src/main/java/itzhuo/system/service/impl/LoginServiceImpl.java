@@ -3,6 +3,7 @@ package itzhuo.system.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.wf.captcha.SpecCaptcha;
 import io.netty.util.internal.StringUtil;
+import itzhuo.common.exception.BizException;
 import itzhuo.common.utils.JwtUtil;
 import itzhuo.system.dao.entity.UserEntity;
 import itzhuo.system.dao.model.login.CaptchaVO;
@@ -53,11 +54,11 @@ public class LoginServiceImpl implements LoginService {
     public LoginVO login(Map<String, String> parameters) throws Exception {
         // 1、判断是否是入了验证码
         if (!StringUtils.hasText(parameters.get("captchaCode"))) {
-            throw new RuntimeException("未输入验证码！");
+            throw new BizException("未输入验证码！");
         }
         // 2、校验验证码
         if (!parameters.get("captchaCode").equals(redisTemplate.opsForValue().get(parameters.get("captchaKey")))) {
-            throw new RuntimeException("验证码错误！");
+            throw new BizException("验证码错误！");
         }
         // 3、校验用户名密码
         LambdaQueryWrapper<UserEntity> wrapper = new LambdaQueryWrapper<>();
@@ -65,7 +66,7 @@ public class LoginServiceImpl implements LoginService {
         System.out.println(DigestUtils.sha256Hex(parameters.get("password")));
         UserEntity userEntity = userService.getOne(wrapper);
         if (userEntity == null) {
-            throw new RuntimeException("用户名或密码错误！");
+            throw new BizException("用户名或密码错误！");
         }
         // 4、生成token
         LoginVO loginVO = new LoginVO();

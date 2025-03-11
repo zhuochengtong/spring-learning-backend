@@ -2,6 +2,7 @@ package itzhuo.common.utils;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
+import itzhuo.common.exception.BizException;
 
 import javax.crypto.SecretKey;
 import java.util.Date;
@@ -42,9 +43,9 @@ public class JwtUtil {
                     build().parseClaimsJws(token);
             return claimsJws.getBody();
         } catch (ExpiredJwtException e) {
-            throw new RuntimeException("token过期");
+            throw new BizException("token过期");
         } catch (JwtException e) {
-            throw new RuntimeException("token非法");
+            throw new BizException("token非法");
         }
     }
 }
