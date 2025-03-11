@@ -1,5 +1,6 @@
 package itzhuo.system.controller;
 
+import itzhuo.common.context.LoginUserContext;
 import itzhuo.common.result.ActionResult;
 import itzhuo.system.dao.model.login.CaptchaVO;
 import itzhuo.system.dao.model.login.LoginVO;
@@ -12,7 +13,6 @@ import javax.swing.*;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/system")
 public class LoginController {
 
     @Resource
@@ -47,13 +47,12 @@ public class LoginController {
 
     /**
      * 获取当前用户信息
-     * @param id
      * @return
      */
-    @GetMapping("/{id}")
-    public ActionResult<UserInfoVO> getUserInfo(@PathVariable("id") String id){
+    @GetMapping("/currentUser")
+    public ActionResult<UserInfoVO> getCurrentUserInfo(){
         try {
-            return ActionResult.success(loginService.getUserInfo(id));
+            return ActionResult.success(loginService.getUserInfo(LoginUserContext.getLoginUser().getUserId()));
         } catch (Exception e) {
             return ActionResult.fail(e.getMessage());
         }
