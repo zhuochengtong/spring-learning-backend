@@ -3,6 +3,9 @@ server:
   tomcat:
     uri-encoding: UTF-8
   port: 30001
+  # 全局设置请求路径增加前缀
+  servlet:
+    context-path: /system
 
 
 spring:
@@ -60,10 +63,10 @@ springdoc:
 #    date-format: yyyy-MM-dd HH:mm:ss
 #    time-zone: GMT+8
 
-
-#admin:
-#  auth:
-#    path-patterns:
-#      include: /admin/**
-#      exclude: /admin/login/**
+# 拦截器应路径配置
+system:
+  auth:
+    path-patterns:
+      include: /system/**
+      exclude: /system/login/**,
 
