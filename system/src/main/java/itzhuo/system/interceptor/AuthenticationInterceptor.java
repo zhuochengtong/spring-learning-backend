@@ -36,7 +36,7 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
         if (!authHeader.startsWith("Bearer ")) {
             throw new BizException("非法Token格式");
         }
-        // 提取并去除 Bearer 前缀(这是在前端拼接的前缀)
+        // 提取并去除 Bearer 前缀(这是在生成token时拼接的前缀)  为了规范，Bearer代表Authorization头定义的schema
         String token = authHeader.substring(7);
         Claims claims = JwtUtil.parseToken(token);
         String userId = claims.get("userId", String.class);

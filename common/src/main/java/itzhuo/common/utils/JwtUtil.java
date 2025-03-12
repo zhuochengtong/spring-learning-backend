@@ -22,7 +22,7 @@ public class JwtUtil {
      * @return
      */
     public static String createToken(String userId, String username) {
-        return Jwts.builder().
+        return "Bearer "+Jwts.builder().
                 setSubject("USER_INFO").
                 setExpiration(new Date(System.currentTimeMillis() + tokenExpiration)).
                 claim("userId", userId).
