@@ -2,8 +2,10 @@ package itzhuo.system.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import itzhuo.common.utils.JsonUtil;
 import itzhuo.system.dao.entity.SystemMenuEntity;
 import itzhuo.system.dao.entity.UserEntity;
+import itzhuo.system.dao.model.system.SystemMenuCrFrom;
 import itzhuo.system.dao.model.system.SystemMenuListVO;
 import itzhuo.system.mapper.SystemMenuMapper;
 import itzhuo.system.mapper.UserMapper;
@@ -81,4 +83,13 @@ public class SystemMenuServiceImpl extends ServiceImpl<SystemMenuMapper, SystemM
         return childList.isEmpty() ? null : childList;  // 返回null避免生成空数组
     }
 
+    /**
+     * 创建菜单
+     * @param systemMenuCrFrom
+     */
+    @Override
+    public void createMenu(SystemMenuCrFrom systemMenuCrFrom) {
+        SystemMenuEntity systemMenuEntity = JsonUtil.getJsonToBean(systemMenuCrFrom, SystemMenuEntity.class);
+        this.save(systemMenuEntity);
+    }
 }

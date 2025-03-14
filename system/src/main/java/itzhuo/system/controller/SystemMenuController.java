@@ -1,13 +1,13 @@
 package itzhuo.system.controller;
 
 import itzhuo.common.result.ActionResult;
-import itzhuo.system.dao.entity.SystemMenuEntity;
+import itzhuo.common.utils.JsonUtil;
+import itzhuo.system.dao.model.system.SystemMenuCrFrom;
+import itzhuo.system.dao.model.system.SystemMenuListVO;
 import itzhuo.system.service.SystemMenuService;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,12 +20,23 @@ public class SystemMenuController {
     private SystemMenuService systemMenuService;
 
     @GetMapping("/list")
-    public ActionResult<List<SystemMenuEntity>> list(){
+    public ActionResult<List<SystemMenuListVO>> list(){
         try {
-            List<SystemMenuEntity> list = systemMenuService.selectMenuTreeAll();
+            List<SystemMenuListVO> list = JsonUtil.getJsonToList(systemMenuService.selectMenuTreeAll(), SystemMenuListVO.class);
             return ActionResult.success(list);
         } catch (Exception e) {
             return ActionResult.fail(e.getMessage());
         }
     }
+
+    @PostMapping("/create")
+    public ActionResult<String> create(@RequestBody SystemMenuCrFrom systemMenuCrFrom){
+        try {
+            systemMenuService.createMenu(systemMenuCrFrom);
+            return ActionResult.success("菜单创建成功！");
+        } catch (Exception e) {
+            return ActionResult.fail(e.getMessage());
+        }
+    }
+
 }
