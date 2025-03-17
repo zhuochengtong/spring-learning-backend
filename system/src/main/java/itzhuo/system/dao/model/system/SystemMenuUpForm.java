@@ -5,8 +5,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-public class SystemMenuCrFrom implements Serializable {
-    private String id;
+public class SystemMenuUpForm implements Serializable {
     private String parentId;
     private String name;
     private String title;

@@ -2,9 +2,7 @@ package itzhuo.system.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import itzhuo.system.dao.entity.SystemMenuEntity;
-import itzhuo.system.dao.entity.UserEntity;
-import itzhuo.system.dao.model.system.SystemMenuCrFrom;
-import itzhuo.system.dao.model.system.SystemMenuListVO;
+import itzhuo.system.dao.model.system.SystemMenuCrForm;
 
 import java.util.List;
 
@@ -18,7 +16,7 @@ public interface SystemMenuService extends IService<SystemMenuEntity> {
 
     /**
      * 新增菜单
-     * @param systemMenuCrFrom
+     * @param systemMenuCrForm
      */
-    void createMenu(SystemMenuCrFrom systemMenuCrFrom);
+    void createMenu(SystemMenuCrForm systemMenuCrForm);
 }

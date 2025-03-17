@@ -4,23 +4,14 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import itzhuo.common.utils.JsonUtil;
 import itzhuo.system.dao.entity.SystemMenuEntity;
-import itzhuo.system.dao.entity.UserEntity;
-import itzhuo.system.dao.model.system.SystemMenuCrFrom;
-import itzhuo.system.dao.model.system.SystemMenuListVO;
+import itzhuo.system.dao.model.system.SystemMenuCrForm;
 import itzhuo.system.mapper.SystemMenuMapper;
-import itzhuo.system.mapper.UserMapper;
 import itzhuo.system.service.SystemMenuService;
-import itzhuo.system.service.UserService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
-import org.springframework.util.CollectionUtils;
-import org.springframework.util.StringUtils;
 
-import java.awt.*;
 import java.util.*;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -85,11 +76,11 @@ public class SystemMenuServiceImpl extends ServiceImpl<SystemMenuMapper, SystemM
 
     /**
      * 创建菜单
-     * @param systemMenuCrFrom
+     * @param systemMenuCrForm
      */
     @Override
-    public void createMenu(SystemMenuCrFrom systemMenuCrFrom) {
-        SystemMenuEntity systemMenuEntity = JsonUtil.getJsonToBean(systemMenuCrFrom, SystemMenuEntity.class);
+    public void createMenu(SystemMenuCrForm systemMenuCrForm) {
+        SystemMenuEntity systemMenuEntity = JsonUtil.getJsonToBean(systemMenuCrForm, SystemMenuEntity.class);
         this.save(systemMenuEntity);
     }
 }

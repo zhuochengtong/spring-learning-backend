@@ -9,6 +9,7 @@ import lombok.Data;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -35,15 +36,15 @@ public class SystemMenuEntity implements Serializable {
     @TableField("status")
     private Integer status;
     @TableField("creator_time")
-    private LocalDateTime creatorTime;
+    private Date creatorTime;
     @TableField("creator_user_id")
     private String creatorUserId;
     @TableField("last_modify_time")
-    private LocalDateTime lastModifyTime;
+    private Date lastModifyTime;
     @TableField("last_modify_user_id")
     private String lastModifyUserId;
     @TableField("delete_time")
-    private LocalDateTime deleteTime;
+    private Date deleteTime;
     @TableField("delete_user_id")
     private String deleteUserId;
     @TableField("delete_mark")

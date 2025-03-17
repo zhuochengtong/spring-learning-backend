@@ -1,10 +1,7 @@
 package itzhuo.system.controller;
 
-import itzhuo.common.result.ActionResult;
 import itzhuo.common.utils.JsonUtil;
-import itzhuo.system.dao.model.system.SystemMenuCrFrom;
-
-import static org.junit.jupiter.api.Assertions.*;
+import itzhuo.system.dao.model.system.SystemMenuCrForm;
 
 class SystemMenuControllerTest {
 
@@ -22,7 +19,7 @@ class SystemMenuControllerTest {
                     "    \"perms\": null,\n" +
                     "    \"status\": 1\n" +
                     "}\n";
-            SystemMenuCrFrom bean = JsonUtil.getJsonToBean(json, SystemMenuCrFrom.class);
+            SystemMenuCrForm bean = JsonUtil.getJsonToBean(json, SystemMenuCrForm.class);
             System.out.println(bean);
         } catch (Exception e) {
             e.printStackTrace();
