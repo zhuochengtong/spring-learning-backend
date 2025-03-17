@@ -57,7 +57,7 @@ public class LoginServiceImpl implements LoginService {
             throw new BizException("未输入验证码！");
         }
         // 2、校验验证码
-        if (!parameters.get("captchaCode").equals(redisTemplate.opsForValue().get(parameters.get("captchaKey")))) {
+        if (!parameters.get("captchaCode").toLowerCase().equals(redisTemplate.opsForValue().get(parameters.get("captchaKey")))) {
             throw new BizException("验证码错误！");
         }
         // 3、校验用户名密码
