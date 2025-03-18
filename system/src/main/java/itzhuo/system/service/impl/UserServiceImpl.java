@@ -5,10 +5,14 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import itzhuo.common.utils.JsonUtil;
 import itzhuo.system.dao.entity.UserEntity;
+import itzhuo.system.dao.model.user.UserCrForm;
 import itzhuo.system.dao.model.user.UserPagination;
+import itzhuo.system.dao.model.user.UserUpForm;
 import itzhuo.system.mapper.UserMapper;
 import itzhuo.system.service.UserService;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -35,5 +39,30 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserEntity> impleme
         Page<UserEntity> page = new Page<>(pagination.getCurrentPage(), pagination.getPageSize());
         IPage<UserEntity> Ipage = this.page(page,wrapper);
         return pagination.setData(Ipage.getRecords(),Ipage.getTotal());
+    }
+
+    @Override
+    public void create(UserCrForm userCrForm) {
+        UserEntity userEntity = JsonUtil.getJsonToBean(userCrForm, UserEntity.class);
+        // 新建用户默认密码
+        userEntity.setPassword(DigestUtils.sha256Hex("0000"));
+        this.save(userEntity);
+    }
+
+    @Override
+    public void update(String id, UserUpForm userUpForm) {
+        UserEntity userEntity = JsonUtil.getJsonToBean(userUpForm, UserEntity.class);
+        userEntity.setId(id);
+        this.updateById(userEntity);
+    }
+
+    @Override
+    public void delete(String id) {
+        this.removeById(id);
+    }
+
+    @Override
+    public void deleteBatch(List<String> ids) {
+        this.removeByIds(ids);
     }
 }
