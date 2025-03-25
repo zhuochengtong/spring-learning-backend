@@ -43,9 +43,9 @@ public class JwtUtil {
                     build().parseClaimsJws(token);
             return claimsJws.getBody();
         } catch (ExpiredJwtException e) {
-            throw new BizException("token过期");
+            throw new BizException(401,"token过期");
         } catch (JwtException e) {
-            throw new BizException("token非法");
+            throw new BizException(402,"token非法");
         }
     }
 }
