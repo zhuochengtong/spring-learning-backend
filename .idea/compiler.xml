@@ -10,10 +10,20 @@
         <module name="common" />
         <module name="system" />
       </profile>
+      <profile name="Annotation profile for LearnDemo" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../../../../Program Files/Maven/apache-maven-3.8.1/repository/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+        </processorPath>
+        <module name="LearnDemo" />
+      </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="LearnDemo" options="-parameters" />
       <module name="common" options="-parameters" />
       <module name="spring-learning-backend" options="" />
       <module name="system" options="-parameters" />

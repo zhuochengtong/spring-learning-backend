@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * JSON转换工具类
@@ -82,5 +83,15 @@ public class JsonUtil {
      */
     public static String getObjectToStringDateFormat(Object object, String dateFormat) {
         return JSON.toJSONStringWithDateFormat(object, dateFormat, SerializerFeature.WriteMapNullValue);
+    }
+
+    /**
+     * 功能描述：把JSON数据转换成Map
+     *
+     * @param jsonData JSON数据
+     * @return Map<String, Object>
+     */
+    public static Map<String, Object> getJsonToMap(String jsonData) {
+        return JSON.parseObject(jsonData, Map.class);
     }
 }

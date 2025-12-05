@@ -46,6 +46,20 @@ public class LoginController {
     }
 
     /**
+     * 登录（redis）
+     * @param parameters
+     * @return
+     */
+    @RequestMapping(value = "/loginRedis", method = {RequestMethod.GET, RequestMethod.POST})
+    public ActionResult<LoginVO> loginRedis(@RequestParam Map<String, String> parameters){
+        try {
+            return ActionResult.success(loginService.loginRedis(parameters));
+        } catch (Exception e) {
+            return ActionResult.fail(e.getMessage());
+        }
+    }
+
+    /**
      * 获取当前用户信息
      * @return
      */
@@ -56,5 +70,11 @@ public class LoginController {
         } catch (Exception e) {
             return ActionResult.fail(e.getMessage());
         }
+    }
+
+    @GetMapping("/test")
+    public ActionResult<String> test(){
+        String ok = "ok";
+        return ActionResult.success(ok);
     }
 }

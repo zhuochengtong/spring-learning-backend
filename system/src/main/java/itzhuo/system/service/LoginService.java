@@ -11,5 +11,7 @@ public interface LoginService {
 
     LoginVO login(Map<String, String> parameters) throws Exception;
 
+    LoginVO loginRedis(Map<String, String> parameters) throws Exception;
+
     UserInfoVO getUserInfo(String userId);
 }

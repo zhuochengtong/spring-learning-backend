@@ -2,20 +2,18 @@ package itzhuo.common.utils;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
-import itzhuo.common.context.LoginUser;
 import itzhuo.common.exception.BizException;
-import jakarta.annotation.Resource;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.StringRedisTemplate;
 
 import javax.crypto.SecretKey;
 import java.util.Date;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 /**
  * json web token 工具类
  */
-public class JwtUtil {
+public class JwtUtilNoRedis {
 
     private static final long tokenExpiration = 60 * 60 * 1000L; // 1小时
     private static final SecretKey tokenSignKey = Keys.hmacShaKeyFor("M0PKKI6pYGVWWfDZw90a0lTpGYX1d4AQ".getBytes());

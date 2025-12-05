@@ -46,12 +46,12 @@ mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
-# minio配置
-minio:
-  endpoint: http://localhost:9005
-  access-key: Uvvo9CqHZX07vyojSta2
-  secret-key: foLfnZbikox87YvmzwSM0AgFb2Y3tZfuCos7mfOu
-  bucket-name: house
+## minio配置
+#minio:
+#  endpoint: http://localhost:9005
+#  access-key: Uvvo9CqHZX07vyojSta2
+#  secret-key: foLfnZbikox87YvmzwSM0AgFb2Y3tZfuCos7mfOu
+#  bucket-name: house
 
 # swagger配置
 springdoc:

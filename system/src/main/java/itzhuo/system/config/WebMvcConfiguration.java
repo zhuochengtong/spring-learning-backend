@@ -1,9 +1,12 @@
 package itzhuo.system.config;
 
 import itzhuo.system.interceptor.AuthenticationInterceptor;
+import itzhuo.system.interceptor.LoginInterceptor;
+import itzhuo.system.interceptor.RefreshTokenInterceptor;
 import jakarta.annotation.Resource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -15,6 +18,7 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
 
     @Resource
     private AuthenticationInterceptor authenticationInterceptor;
+
 
     /**
      * 指定拦截器应该拦截的路径
@@ -28,14 +32,23 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
     @Value("${system.auth.path-patterns.exclude}")
     private String[] excludePathPatterns;
 
+    @Resource
+    private RedisTemplate<String,Object> redisTemplate;
+
     /**
      * 添加拦截器并配置拦截和排除的路径模式。
      * @param registry 拦截器注册表
      */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(this.authenticationInterceptor)
+//        registry.addInterceptor(this.authenticationInterceptor)
+//                .addPathPatterns("/**")
+//                .excludePathPatterns("/captcha","/login").order(1);
+        registry.addInterceptor(new LoginInterceptor())
                 .addPathPatterns("/**")
-                .excludePathPatterns("/captcha","/login");
+                .excludePathPatterns("/captcha","/login","/loginRedis").order(1);
+
+        // token 刷新拦截器
+        registry.addInterceptor(new RefreshTokenInterceptor(redisTemplate)).addPathPatterns("/**").order(0);
     }
 }
